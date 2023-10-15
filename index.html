@@ -4,124 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text color */
-        }
-
-        h1 {
-            text-align: left; /* Align the title to the left */
-            color: #fff; /* Teal title color */
-            padding: 20px; /* Add some padding for spacing */
-        }
-
-        .lead-paragraph {
-            text-align: left; /* Align the text to the left */
-            padding: 0 20px; /* Add padding to the sides */
-            font-size: 20px; /* Larger font size for a lead paragraph */
-            line-height: 1.6; /* Increased line height for better readability */
-            margin-top: 5px; /* Add a small margin between title and text */
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 0; /* Remove spacing between grid items */
-        }
-
-        .photo {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer; /* Add a pointer cursor to indicate clickability */
-            margin: 0; /* Remove margin between photos */
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-        }
-
-        footer p {
-            margin: 0; /* Remove default margin for the paragraph inside the footer */
-        }
-
-        footer a {
-            color: #fff; /* White text color for the link */
-            text-decoration: underline; /* Underline the link */
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <title>A ballet of stars, dust and colors.</title>
 </head>
 <body>
 
     <h1>A ballet of stars, dust and colors.</h1>
 
-    <p class="lead-paragraph">Hey Maryam, look to the stars and never stop dreaming.<br>From Madrid, with love ❤️</p>
-
+    <p class="lead-paragraph">Hey Maryam, look to the stars and never stop dreaming.<br>I love you.<br>From Madrid, with love ❤️</p>
 
     <div class="photo-grid" id="photoGrid">
     </div>
 
     <footer>
-    <p>Made by <a href="https://twitter.com/victorelexpe" target="_blank" rel="noopener noreferrer">victorelexpe</a></p>
-</footer>
-
+        <p>Made by <a href="https://x.com/victorelexpe" target="_blank" rel="noopener noreferrer">victorelexpe</a></p>
+    </footer>
 
     <script>
         var photoList = [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg/1280px-Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Eagle_Nebula_from_ESO.jpg/800px-Eagle_Nebula_from_ESO.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/800px-Crab_Nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lagoon_Nebula_%28ESO%29.jpg/1024px-Lagoon_Nebula_%28ESO%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/NGC7293_%282004%29.jpg/800px-NGC7293_%282004%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Veil_Nebula_-_NGC6960.jpg/1024px-Veil_Nebula_-_NGC6960.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg/800px-Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Rosette_Nebula_Narrowband_SHO_focal_length_384mm_Stephan_Hamel.jpg/800px-Rosette_Nebula_Narrowband_SHO_focal_length_384mm_Stephan_Hamel.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/30_Doradus%2C_Tarantula_Nebula.jpg/800px-30_Doradus%2C_Tarantula_Nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Barnard_33.jpg/800px-Barnard_33.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/M57_The_Ring_Nebula.JPG/800px-M57_The_Ring_Nebula.JPG',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/The_star_formation_region_Messier_17.jpg/800px-The_star_formation_region_Messier_17.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Close_up_of_the_Trifid_Nebula_M20.jpg/800px-Close_up_of_the_Trifid_Nebula_M20.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/NGC6543.jpg/800px-NGC6543.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg/800px-Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Boomerang_nebula.jpg/800px-Boomerang_nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ngc2392.jpg/800px-Ngc2392.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/NGC_6302_Hubble_2009.full.jpg/800px-NGC_6302_Hubble_2009.full.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/NANeb3PS23_SCNR.jpg/800px-NANeb3PS23_SCNR.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Witch_head_nebula.jpg/800px-Witch_head_nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Iris_Nebula_-_NGC_7023_-_Caldwell_4.jpg/1024px-Iris_Nebula_-_NGC_7023_-_Caldwell_4.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/NASA-FlameNebula-NGC2024-20140507.jpg/800px-NASA-FlameNebula-NGC2024-20140507.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/M27_-_Dumbbell_Nebula.jpg/800px-M27_-_Dumbbell_Nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rho_Ophiuchi_cloud_complex_%28weic2316a%29.jpg/800px-Rho_Ophiuchi_cloud_complex_%28weic2316a%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/PacMan_Nebula.jpg/800px-PacMan_Nebula.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NGC2346.jpg/800px-NGC2346.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sh2136s.jpg/800px-Sh2136s.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Abell21_-_Noaoann09008a.jpg/800px-Abell21_-_Noaoann09008a.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/CaveHunterWilson.jpg/800px-CaveHunterWilson.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Ic5146s.jpg/1024px-Ic5146s.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/The_Bubble_Nebula_-_NGC_7635_-_Heic1608a.jpg/800px-The_Bubble_Nebula_-_NGC_7635_-_Heic1608a.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/NGC_6888_HOO_By_Don_Christopher_Deaver.jpg/800px-NGC_6888_HOO_By_Don_Christopher_Deaver.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Eso1238a.jpg/800px-Eso1238a.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/PIA19836-NGC2174-MonkeyHeadNebula-IR-Spitzer-20150820.jpg/800px-PIA19836-NGC2174-MonkeyHeadNebula-IR-Spitzer-20150820.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Heartandfish32hours.jpg/800px-Heartandfish32hours.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Celestial_Valentine.jpg/800px-Celestial_Valentine.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/1/14/Ic443_wide.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/7/7e/NGC_7662_%22Blue_Snowball%22.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Noao-m97.tif/lossy-page1-500px-Noao-m97.tif.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sadr_Region_rgb.jpg/1024px-Sadr_Region_rgb.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Elephant_Trunk.png/800px-Elephant_Trunk.png',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HaRGB-cropped.png/800px-HaRGB-cropped.png',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/The_Rosy_Glow_of_a_Cosmic_Seagull.jpg/1024px-The_Rosy_Glow_of_a_Cosmic_Seagull.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Soap_Bubble_Nebula_-_Noao0904a.jpg/800px-Soap_Bubble_Nebula_-_Noao0904a.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/NCG1499CalNeb.jpg/800px-NCG1499CalNeb.jpg'
-        ]
+            // Add your photo URLs here
+        ];
 
         // Reference to the photo grid container
         var photoGrid = document.getElementById('photoGrid');
