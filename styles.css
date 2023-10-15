@@ -1,0 +1,52 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+}
+
+h1 {
+    text-align: left; /* Align the title to the left */
+    color: #fff; /* Teal title color */
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.lead-paragraph {
+    text-align: left; /* Align the text to the left */
+    padding: 0 20px; /* Add padding to the sides */
+    font-size: 20px; /* Larger font size for a lead paragraph */
+    line-height: 1.6; /* Increased line height for better readability */
+    margin-top: 5px; /* Add a small margin between title and text */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 0; /* Remove spacing between grid items */
+    padding: 20px;
+}
+
+.photo {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* 1:1 aspect ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Add a pointer cursor to indicate clickability */
+    margin: 0; /* Remove margin between photos */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph inside the footer */
+}
+
+footer a {
+    color: #fff; /* White text color for the link */
+    text-decoration: underline; /* Underline the link */
+}
